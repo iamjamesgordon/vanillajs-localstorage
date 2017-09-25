@@ -2,7 +2,6 @@
 window.onload = function() {
 	
 	"use strict";
-	autoType();	
 	getStorage();
 	
 	
@@ -84,11 +83,12 @@ window.onload = function() {
 		
 		var userProfile = JSON.parse(window.localStorage.getItem("userObject"));
 		
-		document.getElementById("intro-copy").innerHTML = "Hi, Welcome Back";	
+		document.getElementById("intro-copy").innerHTML = "Hi, Welcome Back " + userProfile.name;	
 		document.getElementById("user-options").innerHTML = " ";
-		document.getElementById("user-options").innerHTML += "<div>" + userProfile.name + "</div>";
-		document.getElementById("user-options").innerHTML += "<div>" + userProfile.age + "</div>";
-		document.getElementById("user-options").innerHTML += "<div>" + userProfile.colour + "</div>";
+		document.getElementById("user-options").innerHTML += "<h1>Hi " + userProfile.name + ",</h1>";
+		document.getElementById("user-options").innerHTML += "<h2>You are " + userProfile.age + " years old,</h2>";
+		document.getElementById("user-options").innerHTML += "<p id='user-colour'>Your favourite colour is " + userProfile.colour + "</p>";
+		document.getElementById("user-colour").style.color = userProfile.colour;
 		document.getElementById("user-options").innerHTML += ' <button id="storageClear">Clear</button>';
 		
 	}

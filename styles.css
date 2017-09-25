@@ -93,6 +93,12 @@ button:hover {
 	border-bottom: 2px solid white;
 }
 
+#user-profile {
+	position: absolute;
+	top: 50%;
+	text-align: left;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: white;
   font-size: 12px;
@@ -108,4 +114,9 @@ button:hover {
 :-moz-placeholder { /* Firefox 18- */
   color: white;
   font-size: 12px;
+}
+
+.u-p-block {
+	width: 25%;
+	float: left;
 }
