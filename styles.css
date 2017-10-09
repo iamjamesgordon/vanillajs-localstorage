@@ -71,6 +71,7 @@ button:hover {
 	width: 960px;
 	position: absolute;
 	top: 50%;
+	transform: translateY(-50%);
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -96,7 +97,13 @@ button:hover {
 #user-profile {
 	position: absolute;
 	top: 50%;
+	transform: translateY(-50%);
 	text-align: left;
+}
+
+.user-block {
+	width: 33.3333%;
+	height: 200px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

@@ -25,9 +25,16 @@ window.onload = function() {
 			if (counter < bannerHeader.length - 1) {
 				counter++;
 				document.querySelector("#intro-copy").innerHTML += bannerHeader[counter];
+				
+				if(counter === bannerHeader.length -1) {
+					windowFade();
+				}
+				
 			} 
 			
-		}, 100);	
+		}, 100);
+		
+		
 		
 	} /* Auto Loop */
 	
@@ -110,14 +117,23 @@ window.onload = function() {
 	
 	/* ---------------------------------------------- */
 	
-	/*Nav button functions*/
+	/*Window fade - Button click event*/
 	
 	document.querySelector("#skip-intro").onclick = function() {
+		
+		windowFade();
+		
+	};
+	
+	/*Window fade - Autotype complete*/
+	
+
+	function windowFade() {
 		
 		document.querySelector("#window-one-wrapper").style.opacity = 0;
 		document.querySelector("#window-two-wrapper").style.opacity = 1;
 		
-	};
-
+	}
+	
 	
 };
